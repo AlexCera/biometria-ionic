@@ -1,0 +1,7 @@
+{
+  "name": "biomteria-ionic",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
