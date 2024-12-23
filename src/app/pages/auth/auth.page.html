@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title></ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <main class="d-flex-center">
+    <form [formGroup]="authForm" class="auth-form" (ngSubmit)="sendForm()" (keypress.enter)="sendForm()">
+
+      <img src="assets/shield.webp" width="150px">
+
+      <div class="gradient-input">
+        <ion-label>Correo</ion-label>
+        <div class="input">
+          <ion-input formControlName="email" type="email" autocomplete="email"
+            placeholder="youremail@domain.co"></ion-input>
+        </div>
+      </div>
+
+      <div class="gradient-input">
+        <ion-label>Contraseña</ion-label>
+        <div class="input">
+          <ion-input formControlName="password" type="password" placeholder="********">
+            <ion-input-password-toggle color="dark" slot="end"></ion-input-password-toggle>
+          </ion-input>
+        </div>
+      </div>
+
+      <p class="ion-text-end">¿Olvidaste tu contraseña?</p>
+
+      <ion-row class="ion-padding-bottom">
+        <ion-col [size]="getBiometricCredentials() ? '9' : '12'">
+          <ion-button [disabled]="authForm.invalid" class="gradient-btn" mode="ios" expand="block" type="submit">
+            Entrar
+            <ion-icon slot="end" name="log-in-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+        <ion-col *ngIf="getBiometricCredentials()" size="3">
+          <ion-button (click)="biometricLogin()" class="gradient-btn ion-no-padding" mode="ios" expand="block">
+            <ion-icon name="finger-print-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+      </ion-row>
+
+      <p>¿No tienes una cuenta? <strong>Regístrate</strong></p>
+    </form>
+  </main>
+</ion-content>

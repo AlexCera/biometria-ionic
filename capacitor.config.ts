@@ -1,8 +1,8 @@
 import type { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'biomteria-ionic',
+  appId: 'io.biometric.app',
+  appName: 'Biometría',
   webDir: 'www'
 };
 

@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Biometría</string>
+    <string name="title_activity_main">Biometría</string>
+    <string name="package_name">io.biometric.app</string>
+    <string name="custom_url_scheme">io.biometric.app</string>
+</resources>
